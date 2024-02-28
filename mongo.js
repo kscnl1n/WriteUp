@@ -2,7 +2,7 @@ const mongoose=require("mongoose")
 
 mongoose.set('strictQuery', false)
 
-mongoose.connect("mongodb://127.0.0.1:27017/LogIn")
+mongoose.connect("mongodb+srv://lonestarkingwoodacm:donthackme23!@cluster0.jdnz9i0.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
 .then(()=>{
     console.log('mongoose connected');
 })
