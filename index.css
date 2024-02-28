@@ -1,0 +1,65 @@
+body {
+    background-image: url('./assets/index/indexbackground.svg');
+}
+
+h1 {
+    font-family: "DM Serif Display", serif;
+    margin: 0px 0px 0px 0px;
+    font-size: 800%;
+    font-weight: 400;
+    font-style: bold;
+    color: #404041;
+}
+
+p {
+    font-family: "Noto Sans", sans-serif;
+    margin: 0px 0px 0px 0px;
+    font-size: 200%;
+    font-style: bold;
+    color:#404041;
+}
+
+a {
+    font-size: 180%;
+    text-decoration: none;
+}
+
+a:active {
+    font-size: 160%;
+}
+
+a:visited {
+    font-size: 180%;
+}
+
+
+button {
+    border-radius: 70px;
+    color: #404041;
+    background-color: #67E2B5;
+    font-family: "DM Serif Display", serif;
+    outline: 2px;
+    display: inline;
+    font-size: 170%;
+    padding: 10px 40px 10px 40px;
+    margin: 30px 10px 20px 10px;
+}
+
+button:active {
+    size: 150%;
+}
+
+.indextext {
+    text-align: center;
+    margin-top: 200px;
+    margin-right: 100px;
+    position: absolute;
+    top: 45px;
+    right: 16px;
+}
+
+.indexbutton {
+    text-align: center;
+    justify-content: center;
+    display: inline;
+}

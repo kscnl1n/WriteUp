@@ -1,0 +1,19 @@
+body {
+    background-image: url('./assets/login/loginbackground.svg');
+}
+
+h1 {
+    font-family: "DM Serif Display", serif;
+    margin: 0px 0px 0px 0px;
+    font-size: 800%;
+    font-weight: 400;
+    font-style: bold;
+    color: #404041;
+}
+
+.content {
+    text-align: center;
+    margin-top: 45px;
+    margin-botton: 45px;
+}
+

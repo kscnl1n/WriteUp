@@ -1,0 +1,77 @@
+<!-- The index.html page is the first page that people will see when they click on your site. Here, it is our welcome page. -->
+
+<!DOCTYPE html>
+
+<!-- html opening and closing tags to show where the html code begins and ends. -->
+<html>
+
+<!-- head tag: this is where the metadata about a site is stored.
+Ex: the language it's in, the compatibility it has with other sites, etc.-->
+<head>
+<Title>WriteUp</Title>
+
+<!-- This line specifies the character encoding for the HTML document. 
+In this case, it sets it to UTF-8, which is a widely used character encoding capable of representing most characters in the Unicode standard.-->
+<meta charset="UTF-8">
+
+<!--  This line configures the viewport settings for the webpage. The viewport meta tag is used to control how the webpage 
+is displayed on different devices and screen sizes. name="viewport" specifies it's for the porting of the view, while the content="width=device-width, 
+initial-scale=1.0": This specifies the initial width of the viewport to be equal to the device width, and sets the initial zoom level to 1.0 
+(i.e., no zoom). 
+-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- This line specifies compatibility settings for Internet Explorer. 
+The X-UA-Compatible meta tag is used to instruct Internet Explorer on how to render the webpage. We have to specify this because
+the technology edge is running on is so old that a lot of modern websites are incompatible with it! Google should be fine to pull any other
+website though. -->
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+<!-- Linking the html page to the css page -->
+<link rel="stylesheet" href="index.css"/>
+
+<!-- Importing google fonts we're using 
+Fun fact: this is an api call! A simple one, but an api call nonetheless. -->
+<!-- For DM serif: -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+<!-- For Noto Sans: -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+</head>
+
+<!-- body tag: this is where the actual contents of your site will be stored! -->
+<body>
+
+<div class="indextext">
+
+    <h1>WriteUp</h1>
+
+    <p> Your favourite new writing tool. </p>
+
+    <div class="indexbutton">
+        <p>
+        <div>
+        <a href="login.html"><button>Log In</button></a>
+        </div>
+        <div>
+        <a href="signup.html"><button>Sign Up</button></a>
+        </div>
+        </p>
+    </div>
+
+</div>
+
+
+
+</body>
+
+
+
+
+
+
+</html>
