@@ -16,3 +16,41 @@ h1 {
     margin-top: 45px;
     margin-bottom: 45px;
 }
+
+.promptwindows {
+
+    margin-top: 90px;
+}
+
+button {
+    border-radius: 70px;
+    color: #404041;
+    background-color: #67E2B5;
+    font-family: "DM Serif Display", serif;
+    outline: 2px;
+    display: inline;
+    font-size: 170%;
+    padding: 10px 40px 10px 40px;
+    margin: 30px 10px 20px 10px;
+}
+
+button:active {
+    size: 150%;
+}
+
+label {
+    font-family: "Noto Sans", sans-serif;
+    margin: 0px 0px 0px 0px;
+    font-size: 300%;
+    font-style: bold;
+    color:#404041;
+}
+
+input {
+    font-family: "Noto Sans", sans-serif;
+    text-align: center;
+    margin: 0px 0px 25px 0px;
+    font-size: 200%;
+    color:#404041;
+    width: 25%;
+}

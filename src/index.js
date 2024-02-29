@@ -1,35 +1,39 @@
 const express = require("express")
 const path = require("path")
 const app = express()
-// const hbs = require("hbs")
 const LogInCollection = require("./mongo")
-const port = process.env.PORT || 3000
+const bodyParser = require('body-parser')
+const port = 5500
+const srcPath = path.join(__dirname, '../src')
+console.log(srcPath);
+
 app.use(express.json())
+//app.use(express.static(srcPath))
+app.use(bodyParser.urlencoded({ extended: false }))
 
-app.use(express.urlencoded({ extended: false }))
 
-const templatePath = path.join(__dirname, '../templates')
-const publicPath = path.join(__dirname, '../public')
-console.log(publicPath);
-
-app.set('view engine', 'hbs')
-app.set('views', templatePath)
-app.use(express.static(publicPath))
-
-// hbs.registerPartials(partialPath)
+app.set("views", path.join(__dirname))
+app.set("view engine", "ejs")
 
 app.get('/signup', (req, res) => {
-    res.render('signup')
+    res.send(__dirname + "signup.html")
 })
+
 app.get('/', (req, res) => {
+    res.render('index')
+})
+
+app.get('/login', (req, res) => {
     res.render('login')
 })
+
+
 
 // app.get('/home', (req, res) => {
 //     res.render('home')
 // })
 
-app.post('/signup', async (req, res) => {
+app.post('/signup1', async (req, res) => {
     
     // const data = new LogInCollection({
     //     name: req.body.name,
@@ -39,17 +43,17 @@ app.post('/signup', async (req, res) => {
 
     const data = {
         email: req.body.email,
-        password: req.body.password
+        password: req.body.pw
     }
 
     const checking = await LogInCollection.findOne({ email: req.body.email })
 
-   try{
+   try {
 
-    if (checking != null && checking.email === req.body.email && checking.password===req.body.password) {
+    if (checking != null && checking.email === req.body.email && checking.pw === req.body.pw) {
         res.send("user details already exists")
     }
-    else{
+    else {
         await LogInCollection.insertMany([data])
     }
    }
@@ -58,9 +62,7 @@ app.post('/signup', async (req, res) => {
     res.send("wrong inputs")
    }
 
-    res.status(201).render("home", {
-        naming: req.body.email
-    })
+    res.status(201)
 })
 
 app.post('/login', async (req, res) => {
@@ -68,8 +70,8 @@ app.post('/login', async (req, res) => {
     try {
         const check = await LogInCollection.findOne({ email: req.body.email })
 
-        if (check.password === req.body.password) {
-            res.status(201).render("home", { naming: `${req.body.password}+${req.body.email}` })
+        if (check.pw === req.body.pw) {
+            res.status(201).render("home", { naming: `${req.body.pw}+${req.body.email}` })
         }
 
         else {
