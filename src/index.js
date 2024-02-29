@@ -1,9 +1,10 @@
+v
 const express = require("express")
 const path = require("path")
 const app = express()
 const LogInCollection = require("./mongo")
 const bodyParser = require('body-parser')
-const port = 5500
+const port = 3000
 const srcPath = path.join(__dirname, '../src')
 console.log(srcPath);
 
@@ -11,29 +12,11 @@ app.use(express.json())
 //app.use(express.static(srcPath))
 app.use(bodyParser.urlencoded({ extended: false }))
 
-
-app.set("views", path.join(__dirname))
-app.set("view engine", "ejs")
-
-app.get('/signup', (req, res) => {
-    res.send(__dirname + "signup.html")
-})
-
-app.get('/', (req, res) => {
-    res.render('index')
-})
-
-app.get('/login', (req, res) => {
-    res.render('login')
-})
-
-
-
 // app.get('/home', (req, res) => {
 //     res.render('home')
 // })
 
-app.post('/signup1', async (req, res) => {
+app.post('/signup', async (req, res) => {
     
     // const data = new LogInCollection({
     //     name: req.body.name,

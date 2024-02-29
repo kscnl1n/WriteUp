@@ -2,7 +2,7 @@ const mongoose=require("mongoose")
 
 mongoose.set('strictQuery', false)
 
-mongoose.connect("mongodb+srv://kf:smartpassword@cluster0.jdnz9i0.mongodb.net/writeup")
+mongoose.connect("mongodb+srv://************@cluster0.jdnz9i0.mongodb.net/writeup")
 .then(() => {
     console.log('mongoose connected');
 })
